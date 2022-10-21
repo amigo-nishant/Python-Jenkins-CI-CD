@@ -1,7 +1,6 @@
-FROM python:3-alpine
-WORKDIR /service
-COPY requirements.txt .
-RUN pip install -r requirements.txt
-COPY . ./
-EXPOSE 2000
-ENTRYPOINT ["python3", "app.py"]
+FROM python:3
+RUN mkdir WORK_REPO
+RUN cd WORK_REPO
+WORKDIR /WORK_REPO
+ADD hello_world.py
+CMD ["python", "-u", "hello-world.py"]
