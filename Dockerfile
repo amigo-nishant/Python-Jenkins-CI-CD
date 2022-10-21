@@ -1,6 +1,6 @@
-FROM python:3
-RUN mkdir WORK_REPO
-RUN cd WORK_REPO
-WORKDIR /WORK_REPO
-ADD hello_world.py
-CMD ["python", "-u", "hello-world.py"]
+FROM python:3.6
+COPY . /app
+WORKDIR /app
+RUN pip install -r requirements.txt
+ENTRYPOINT ["python"]
+CMD ["app.py"]
