@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello we are in DEV environment"
+    return "Hello we are in DEV branch"
 
 
 if __name__ == "__main__":
